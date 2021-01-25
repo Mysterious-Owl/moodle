@@ -15,7 +15,7 @@ To mark automatically, import the 'moodle.xml' file in 'Task' in Windows
   - Shows the list of all subject.
   - Setting to change login ceredentials or attendance links.
   - Show help.
-<br> <br>
+<br>
 
 ## Installer Features:
 <ul>
@@ -24,10 +24,11 @@ To mark automatically, import the 'moodle.xml' file in 'Task' in Windows
   <li>Craetes desktop and start shortcut. </li>
   <li>Download required files. </li>
 </ul>
-<br> <br>
+<br>
 
 > ## NOTE
 > Install in any directory other than system because program will not be able to write/read the files without administrative priviledges
+ <br>
 
 ## CLI commands:  <br>
 <pre>  
