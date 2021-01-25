@@ -26,10 +26,6 @@ To mark automatically, import the 'moodle.xml' file in 'Task' in Windows
 </ul>
 <br>
 
-> ## NOTE
-> Install in any directory other than system because program will not be able to write/read the files without administrative priviledges
- <br>
-
 ## CLI commands:  <br>
 <pre>  
   (no arguments)                Open GUI console. <br>
@@ -41,3 +37,7 @@ To mark automatically, import the 'moodle.xml' file in 'Task' in Windows
   change                        Change settings <br>
   help                          Show help. <br>
 </pre>
+
+> ## NOTE
+> Install in any directory other than system because program will not be able to write/read the files without administrative priviledges
+ <br>
