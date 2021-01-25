@@ -18,10 +18,12 @@ To mark automatically, import the 'moodle.xml' file in 'Task' in Windows
 <br> <br>
 
 ## Installer Features:
-  - GUI console.
-  - Browse directory to select installation location
-  - Craetes desktop and start shortcut
-  - Download required files
+<ul>
+  <li>GUI console. </li>
+  <li>Browse directory to select installation location. </li>
+  <li>Craetes desktop and start shortcut. </li>
+  <li>Download required files. </li>
+</ul>
 <br> <br>
 
 > ## NOTE
