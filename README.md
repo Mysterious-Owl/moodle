@@ -2,11 +2,16 @@
 
 This program is basically to mark attendance and open moodle.<br>
 Just download the installer and run it! <br>
-[Install Now](https://github.com/Mysterious-Owl/moodle/raw/main/Installer%20MoodleProgram.exe) <br>
-To mark automatically, import the 'moodle.xml' file in 'Task' in Windows
+[Install Now](https://github.com/Mysterious-Owl/moodle/releases/) 
 <br>
+
+## To mark automatically
+Import the 'moodle.xml' file in 'Task Schedular' in Windows.
+<br>
+
 ## Features:
   - GUI console.
+  - Random Theme every time
   - CLI interface.
   - Will mark attendance according to current time.
   - Mark attendance of this particular subject.
@@ -26,6 +31,14 @@ To mark automatically, import the 'moodle.xml' file in 'Task' in Windows
 </ul>
 <br>
 
+## [ScreenShots](https://mysterious-owl.github.io/moodle/screenshots/)
+### Opening Screen    
+![Main](https://mysterious-owl.github.io/moodle/screenshots/Main.png)
+<br>
+### Time Table
+![Links](https://mysterious-owl.github.io/moodle/screenshots/Time%20Table.png)
+<br>
+> For More Visit [Here](https://mysterious-owl.github.io/moodle/screenshots/)
 ## CLI commands:  <br>
 <pre>  
   (no arguments)                Open GUI console. <br>
