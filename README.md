@@ -39,7 +39,9 @@ Import the 'moodle.xml' file in 'Task Schedular' in Windows.
 ![Links](https://mysterious-owl.github.io/moodle/screenshots/Time%20Table.png)
 <br>
 > For More Visit [Here](https://mysterious-owl.github.io/moodle/screenshots/)
-## CLI commands:  <br>
+<br>
+
+## CLI commands:   
 <pre>  
   (no arguments)                Open GUI console. <br>
   auto                          Will mark attendance according to current time. <br>
@@ -50,6 +52,8 @@ Import the 'moodle.xml' file in 'Task Schedular' in Windows.
   change                        Change settings <br>
   help                          Show help. <br>
 </pre>
+
+<br>
 
 > ## NOTE
 > Install in any directory other than system because program will not be able to write/read the files without administrative priviledges
