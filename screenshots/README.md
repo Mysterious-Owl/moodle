@@ -1,33 +1,33 @@
 # ScreenShots
 ## Normal Operation
 ### Opening Screen    
-![Main](/screenshots/Main.png)
+![Main](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/Main.png)
 <br>
 ### Select Subject
-![Select Subject](/screenshots/Select%20Subject.png)
+![Select Subject](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/Select%20Subject.png)
 <br>
 ### Time Table
-![Links](/screenshots/Time%20Table.png)
+![Links](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/Time%20Table.png)
 <br>
 ### Subject List
-![Subject List](/screenshots/Subject%20List.png)
+![Subject List](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/Subject%20List.png)
 <br>
 ### Settings
-![Links](/screenshots/Settings.png)
+![Links](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/Settings.png)
 <br>
 ### Login Ceredintials
-![Login Ceredintials](/screenshots/Login%20Ceredintials.png)
+![Login Ceredintials](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/Login%20Ceredintials.png)
 <br>
 ### Links
-![Links](/screenshots/Links.png)
+![Links](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/Links.png)
 <br>
 ### Help
-![Help](/screenshots/Help.png)
+![Help](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/Help.png)
 <br>
 ### About
-![About](/screenshots/About.png)
+![About](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/About.png)
 <br>
 ## Error Handling 
 ### No link found
-![No Link Found](/screenshots/No%20link%20found.png)
+![No Link Found](https://github.com/Mysterious-Owl/moodle/blob/main/screenshots/No%20link%20found.png)
 <br>
