@@ -1,5 +1,8 @@
 # ScreenShots
-## Normal Operation
+----
+
+## ***Main Program***
+
 ### Opening Screen    
 ![Main](https://mysterious-owl.github.io/moodle/screenshots/Main.png)
 <br>
@@ -27,7 +30,25 @@
 ### About
 ![About](https://mysterious-owl.github.io/moodle/screenshots/About.png)
 <br>
-## Error Handling 
-### No link found
+### Error Handling - No link found
+
 ![No Link Found](https://mysterious-owl.github.io/moodle/screenshots/No%20link%20found.png)
+<br>
+<hr>
+
+## ***Installer***
+### Select Installation Directory
+![Select Installation Directory](https://mysterious-owl.github.io/moodle/screenshots/Location.png)
+<br>
+### Enter Username and Password and also select iif you want shortcuts
+![Enter Username and Password and also select iif you want shortcuts](https://mysterious-owl.github.io/moodle/screenshots/Username.png)
+<br>
+### Staring to Install
+![Staring to Install](https://mysterious-owl.github.io/moodle/screenshots/Process.png)
+<br>
+### Steps to automate attendance
+![Steps to automate attendance](https://mysterious-owl.github.io/moodle/screenshots/How%20to.png)
+<br>
+### Installation Complete
+![Installation Complete](https://mysterious-owl.github.io/moodle/screenshots/Completed.png)
 <br>
