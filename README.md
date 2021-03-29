@@ -3,6 +3,9 @@
 This program is basically to mark attendance and open moodle.<br>
 Just download the installer and run it! <br>
 [Install Now](https://github.com/Mysterious-Owl/moodle/releases/) 
+<br><br>
+For video on how to install and setup-<br>
+https://www.youtube.com/watch?v=vzU-uWL1MRs
 <br>
 
 ## To mark automatically
