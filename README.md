@@ -14,15 +14,21 @@ Import the 'moodle.xml' file in 'Task Schedular' in Windows.
 
 ## Features:
   - GUI console.
-  - Random Theme every time
+  - Option to open browser or not.
+  - Multi-user support.
+  - Random Theme every time.
   - CLI interface.
   - Will mark attendance according to current time.
   - Mark attendance of this particular subject.
   - Opens moodle.
   - Show time table.
+  - Highlight current period.
   - Shows the list of all subject.
   - Setting to change login ceredentials or attendance links.
   - Show help.
+  - Logs status, so can be debugged esily.
+  - See automatic marking stats
+
 <br>
 
 ## Installer Features:
@@ -52,6 +58,7 @@ Import the 'moodle.xml' file in 'Task Schedular' in Windows.
   open                          Opens moodle. <br>
   tt                            Print time table. <br>
   subject                       Prints the list of all subject. <br>
+  print                         Prints the auto attendance marking stats. <br>
   change                        Change settings <br>
   help                          Show help. <br>
 </pre>
@@ -60,4 +67,6 @@ Import the 'moodle.xml' file in 'Task Schedular' in Windows.
 
 > ## NOTE
 > Install in any directory other than system because program will not be able to write/read the files without administrative priviledges
+>
+> If chrome doesn't open, shows error, then try changing the version of [chromdriver](https://chromedriver.chromium.org/downloads), download the version compatible with your [chrome version](chrome://settings/help) and replace it in moodleprogram/config folder
  <br>
