@@ -13,7 +13,6 @@ import logging
 import inspect
 
 # pyinstaller moodleprogram.py
-# moodinstaller
 
 abs_path = ''
 for letter in os.path.dirname(os.path.abspath(__file__)) + '\\':
@@ -74,6 +73,9 @@ def read_marking_stats():
 
 
 def raise_ex(text, unknown=False, title=''):
+    type_er = str(type(text).__name__)
+    if type_er != 'str':
+        text = type_er + ": " + str(text)
     if unknown:
         logging.error(f"{inspect.stack()[1][3]:<20}:{title} {str(text).strip()}")
     else:
@@ -100,7 +102,7 @@ def is_marked(status, user_number=0):
         with open(abs_path + "isMarked.txt", "r") as f:
             stats = [i.split('-') for i in f.read().strip().split(':')]
     except FileNotFoundError:
-        stats = [[i, 0, 0] for i in range(total_user())]
+        stats = [[str(i), '0', '0'] for i in range(total_user())]
         with open(abs_path + "isMarked.txt", "w") as f:
             f.write(':'.join(['-'.join(i) for i in stats]))
     except Exception as e:
