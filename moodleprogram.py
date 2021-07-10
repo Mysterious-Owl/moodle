@@ -13,6 +13,7 @@ import logging
 import inspect
 
 # pyinstaller moodleprogram.py
+# moodinstaller
 
 abs_path = ''
 for letter in os.path.dirname(os.path.abspath(__file__)) + '\\':
@@ -229,11 +230,16 @@ def browser(user_number=0, sub=''):
     chrome_options.add_argument("user-data-dir=" + chrome_path)
     if len(sub) == 0:
         chrome_options.add_experimental_option("detach", True)
-        link = "http://moodle.mitsgwalior.in/login/index.php"
+        sub1 = list(print_subject(1).keys())
+        for i in ['', 'NPTEL', 'LUNCH']:
+            sub1.remove(i)
+        sub1 = sub1[0]
+        link = fetch_link(sub1)
     else:
         link = fetch_link(sub)
-        if link is None:
-            return
+
+    if link is None:
+        raise_ex("Link not found!!")
     try:
         driver = webdriver.Chrome(options=chrome_options, executable_path=abs_path + "chromedriver.exe")
     except Exception as e:
@@ -245,13 +251,14 @@ def browser(user_number=0, sub=''):
     driver.get(link)
     username = driver.find_element_by_name("username")
     password = driver.find_element_by_name("password")
+    login_url = driver.current_url
     user_details = fetch_user(user_number)
     if user_details is None:
         return
     username.send_keys(user_details['user'])
     password.send_keys(user_details['pass'])
     driver.find_element_by_id("loginbtn").click()
-    if driver.current_url == "http://moodle.mitsgwalior.in/login/index.php":
+    if driver.current_url == login_url:
         time.sleep(3)
         driver.quit()
         raise_ex("Wrong credentials. \n", title=f"User #{user_number}")
@@ -275,6 +282,8 @@ def browser(user_number=0, sub=''):
             raise_ex(e, True, f"User #{user_number}")
             print_gui("Trying without browser!", title=f'User #{user_number+1}', non_blocking=True)
             return cmd(user_number, sub)
+    else:
+        driver.get(login_url.replace("login/index.php", "my/"))
 
 
 def cmd(user_number, sub=''):
@@ -284,9 +293,9 @@ def cmd(user_number, sub=''):
     user_details = fetch_user(user_number)
     if user_details is None:
         return
-    login_url = "http://moodle.mitsgwalior.in/login/index.php"
     session = requests.session()
-    result = session.get(login_url)
+    result = session.get(link)
+    login_url = result.url
     logintoken = list(set(html.fromstring(result.text).xpath("//input[@name='logintoken']/@value")))[0]
     username = user_details['user']
     password = user_details['pass']
@@ -297,9 +306,11 @@ def cmd(user_number, sub=''):
         raise_ex("Wrong credentials. \n", title=f"User #{user_number}")
         return
 
+    home_url = login_url[:-15]
+
     result = session.get(link, headers=dict(referer=link))
     soup = BeautifulSoup(result.content, 'html.parser')
-    a = soup.select('a[href^="http://moodle.mitsgwalior.in/mod/attendance/attendance.php?"]')
+    a = soup.select('a[href^="' + home_url + 'mod/attendance/attendance.php?"]')
 
     if len(a) == 0:
         raise_ex("Option Not present!! Either Already Marked or Not Open for Self Marking.",
