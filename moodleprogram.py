@@ -15,6 +15,8 @@ import inspect
 # pyinstaller moodleprogram.py
 # moodinstaller
 
+
+# Defining global variables, which tells the state of code
 abs_path = ''
 for letter in os.path.dirname(os.path.abspath(__file__)) + '\\':
     abs_path += '\\' if letter == '\\' else ''
@@ -34,6 +36,11 @@ fieldnames = ['date', 'time', 'user', 'sub']
 
 
 def read_acro():
+    """It reads the acronyms file, which is in csv format and populates that data in global variable named acro.
+
+    :return: It returns nothing
+    :rtype: None"""
+
     global acro
     with open(abs_path + "acro.csv", "r") as f:
         reader = csv.DictReader(f)
@@ -43,6 +50,15 @@ def read_acro():
 
 
 def save_marking_stats(user):
+    """It saves the marking status of attendance.
+
+    It saves the current date, current time, user number, subject in "config/marking_stats.csv".
+    User id is passed and subject is fetched according to current time.
+    It is called when attendance is marked
+
+    :param user: User id
+    :type user: (int)"""
+
     global fieldnames
     with open(abs_path + "marking_stats.csv", 'a', newline='') as f:
         csv_writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -232,7 +248,12 @@ def browser(user_number=0, sub=''):
         chrome_options.add_experimental_option("detach", True)
         sub1 = list(print_subject(1).keys())
         for i in ['', 'NPTEL', 'LUNCH']:
-            sub1.remove(i)
+            try:
+                sub1.remove(i)
+            except ValueError:
+                pass
+            except Exception as e:
+                raise_ex(e, True)
         sub1 = sub1[0]
         link = fetch_link(sub1)
     else:
