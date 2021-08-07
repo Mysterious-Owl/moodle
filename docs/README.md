@@ -6,7 +6,7 @@ Just download the installer and run it! <br>
 <br>
 
 __Appreciation from PySimpleGui__ [https://github.com/Mysterious-Owl/color-identification/issues/2](https://github.com/Mysterious-Owl/color-identification/issues/2)    
-*The owner of the library I used for creating this software*
+*The creator of the library I used for creating this software*
 
 <div style="max-width:600px;">
 <div style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;">
