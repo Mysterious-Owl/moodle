@@ -8,6 +8,9 @@ For video on how to install and setup-<br>
 https://www.youtube.com/watch?v=vzU-uWL1MRs
 <br>
 
+__Appreciation from PySimpleGui__ [https://github.com/Mysterious-Owl/color-identification/issues/2](https://github.com/Mysterious-Owl/color-identification/issues/2)    
+*The owner of the library I used for creating this software*
+
 ## To mark automatically
 Import the 'moodle.xml' file in 'Task Schedular' in Windows.
 <br>
