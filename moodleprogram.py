@@ -261,6 +261,7 @@ def browser(user_number=0, sub=''):
 
     if link is None:
         raise_ex("Link not found!!")
+        return
     try:
         driver = webdriver.Chrome(options=chrome_options, executable_path=abs_path + "chromedriver.exe")
     except Exception as e:
@@ -345,7 +346,8 @@ def cmd(user_number, sub=''):
     sessid = current_url[current_url.index('=') + 1:current_url.index('&')]
 
     soup = BeautifulSoup(attend_page.content, 'lxml')
-    lables = soup.find("div", attrs={"class": "d-flex flex-wrap align-items-center"})
+    lables = soup.find("div", attrs={"class": "d-flex flex-wrap align-items-center"}) or \
+             soup.find("div", attrs={"class": "d-flex flex-wrap"})
     status = lables.find_all("input")[0]['value']
 
     result = session.post(attend_link,
